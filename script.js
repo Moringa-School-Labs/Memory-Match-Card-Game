@@ -21,3 +21,4 @@ function shuffleCards() {
     card.addEventListener("click", flipCard); // add a click event listener to the current card to execute a function `flipCard` when clicked
   });
 }
+shuffleCards();
