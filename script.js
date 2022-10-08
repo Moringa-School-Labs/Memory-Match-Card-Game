@@ -3,8 +3,10 @@ let matchedPairs = 0;
 let cardOne, cardTwo;
 let disableDeck = false;
 
-function flipCard() {
+function flipCard(evt) {
   console.log("flipCard was executed");
+  console.log(evt);
+  const clickedCard = evt.target;
 }
 
 function shuffleCards() {
