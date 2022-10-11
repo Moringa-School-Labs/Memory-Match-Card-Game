@@ -7,6 +7,10 @@ function flipCard(evt) {
   console.log("flipCard was executed");
   console.log(evt);
   const clickedCard = evt.target;
+  if (cardOne !== clickedCard && !disableDeck) {
+    // make sure that the current variable cardOne is not the same value as the clickedCard, AND that the deck is NOT disabled
+    clickedCard.classList.add("flip"); // add the 'flip' class to the classes currently assigned to the clickedCard
+  }
 }
 
 function shuffleCards() {
