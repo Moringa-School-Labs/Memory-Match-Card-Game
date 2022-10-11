@@ -30,12 +30,19 @@ function matchCards(img1, img2) {
       console.log("YOU WIN!");
       return;
     }
+
+    setTimeout(() => {
+      cardOne.classList.add("shake");
+      cardTwo.classList.add("shake");
+    }, 400);
     
-    cardOne.removeEventListener("click", flipCard); 
-    cardTwo.removeEventListener("click", flipCard); 
-    cardOne = cardTwo = ""; 
-    disableDeck = false;
-    return;
+    setTimeout(() => {
+      cardOne.classList.remove("shake", "flip");
+      cardTwo.classList.remove("shake", "flip");
+      cardOne = cardTwo = ""; // reset the cardOne & cardTwo variables to empty string
+      disableDeck = false;
+      return;
+    }, 1200);
   }
  
   cardOne.classList.remove("flip");
